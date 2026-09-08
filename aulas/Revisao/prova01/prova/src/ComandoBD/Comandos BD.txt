@@ -1,0 +1,97 @@
+
+mysql> create database veiculos;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| veiculos           |
++--------------------+
+5 rows in set (0.02 sec)
+
+mysql> use veiculos;
+Database changed
+mysql> CREATE TABLE veiculo(
+    -> marca varchar(15) NOT NULL,
+    -> modelo varchar (15) NOT NULL,
+    -> ano int NOT NULL,
+    -> placa varchar(7) PRIMARY KEY,
+    -> cor varchar(15) NOT NULL
+    -> );
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_veiculos |
++--------------------+
+| veiculo            |
++--------------------+
+1 row in set (0.01 sec)
+
+mysql> desc veiculo;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| marca  | varchar(15) | NO   |     | NULL    |       |
+| modelo | varchar(15) | NO   |     | NULL    |       |
+| ano    | int         | NO   |     | NULL    |       |
+| placa  | varchar(7)  | NO   | PRI | NULL    |       |
+| cor    | varchar(15) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> select * from veiculo;
+Empty set (0.01 sec)
+
+mysql> select * from veiculo;
+Empty set (0.00 sec)
+
+mysql> select * from veiculo;
+Empty set (0.00 sec)
+
+mysql> select * from veiculo;
++-------+--------+------+---------+-------+
+| marca | modelo | ano  | placa   | cor   |
++-------+--------+------+---------+-------+
+| ch    | prisma | 2018 | iyi7984 | prata |
++-------+--------+------+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from veiculo;
++-------+--------+------+---------+----------+
+| marca | modelo | ano  | placa   | cor      |
++-------+--------+------+---------+----------+
+| VW    | GOL    | 2014 | ITR9314 | vermelho |
+| ch    | prisma | 2018 | iyi7984 | prata    |
++-------+--------+------+---------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from veiculo;
++-------+--------+------+---------+----------+
+| marca | modelo | ano  | placa   | cor      |
++-------+--------+------+---------+----------+
+| VW    | GOL    | 2014 | ITR9314 | vermelho |
+| ch    | prisma | 2018 | iyi7984 | prata    |
+| FORD  | KA     | 2020 | QUM3A77 | prata    |
++-------+--------+------+---------+----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from veiculo;
++-------+--------+------+---------+----------+
+| marca | modelo | ano  | placa   | cor      |
++-------+--------+------+---------+----------+
+| VW    | GOL    | 2014 | ITR9314 | vermelho |
+| VH    | PRISMA | 2018 | IYI7777 | branco   |
+| ch    | prisma | 2018 | iyi7984 | prata    |
+| FORD  | KA     | 2020 | QUM3A77 | prata    |
++-------+--------+------+---------+----------+
+4 rows in set (0.00 sec)
+
+mysql>
+
+
