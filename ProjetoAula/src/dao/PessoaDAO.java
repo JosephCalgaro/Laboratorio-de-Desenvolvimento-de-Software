@@ -111,14 +111,15 @@ public class PessoaDAO {
     }
     
     
-    public List<Pessoa> getPessoaNome(String nome){
+    public List<Pessoa> getPessoaNome(String nome, String sexo){
         
-        String sql = "SELECT * FROM pessoa WHERE nome LIKE ?";
+        String sql = "SELECT * FROM pessoa WHERE nome LIKE ? AND sexo LIKE ?";
         
         try{
             
             PreparedStatement stat = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
             stat.setString(1, "%"+nome+"%");
+            stat.setString(2, "%"+sexo+"%");
             ResultSet rs = stat.executeQuery();
             List<Pessoa> listaPessoas = new ArrayList();
             
