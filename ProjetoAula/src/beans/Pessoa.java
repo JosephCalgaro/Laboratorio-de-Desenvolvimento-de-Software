@@ -45,5 +45,33 @@ public class Pessoa {
     public void setIdioma(String idioma) {
         this.idioma = idioma;
     }
+
+    @Override
+    public String toString() {
+        return this.id+" - "+this.nome;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Pessoa other = (Pessoa) obj;
+        return this.id == other.id;
+    }
+    
+    
     
 }
