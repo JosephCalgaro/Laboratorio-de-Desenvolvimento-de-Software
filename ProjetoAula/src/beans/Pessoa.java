@@ -4,11 +4,13 @@
  */
 package beans;
 
+import java.io.Serializable;
+
 /**
  *
  * @author laboratorio
  */
-public class Pessoa {
+public class Pessoa implements Serializable{
     private int id;
     private String nome;
     private String sexo;
